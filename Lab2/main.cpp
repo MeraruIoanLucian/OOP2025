@@ -1,22 +1,21 @@
-#include "Global.cpp"
+#include "NumberList.cpp"
 #include <iostream>
 using namespace std;
-
 int main()
 {
-    Student s1, s2;
-    s1.set_name("Andrei");
-    s1.set_math_grade(9);
-    s1.set_english_grade(8);
-    s1.set_history_grade(7);
-    s2.set_name("Ionutzu");
-    s2.set_math_grade(10);
-    s2.set_english_grade(9);
-    s2.set_history_grade(8);
-    cout << "Name: " << compare_name(s1, s2) << endl;
-    cout << "Average (cel mai mare): " << compare_average(s1, s2) << endl;
-    cout << "Math grade (cea mai mare): " << compare_math_grade(s1, s2) << endl;
-    cout << "English grade (cea mai mare): " << compare_english_grade(s1, s2) << endl;
-    cout << "History grade (cea mai mare): " << compare_history_grade(s1, s2) << endl;
+    NumberList list;
+    list.Init();
+    list.Add(3);
+    list.Add(1);
+    list.Add(2);
+    list.Add(5);
+    list.Add(4);
+    list.Add(6);
+    list.Add(7);
+    list.Add(9);
+    list.Add(8);
+    list.Add(10);
+    list.Sort();
+    list.Print();
     return 0;
 }
